@@ -51,6 +51,7 @@ function showProject(project){
 
     document.getElementById("projectName").innerText = project.projectName;
 
+    document.getElementById("implementationImages").innerHTML = "";
     project.projectImages.forEach((image) =>{
         let img = document.createElement('img');
         img.src = "img/"+image;
