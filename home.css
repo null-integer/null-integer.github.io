@@ -377,8 +377,8 @@ a{
 #projectInfo img{
     float: left;
     margin: 5px;
-    width: 500px;
-    height: 400px;
+    /* width: 500px; */
+    /* height: 400px; */
 }
 #implementationDetails{
     text-align: justify;
