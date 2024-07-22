@@ -68,32 +68,25 @@ function DisplayContent(){
 //Anchoring menus
 
 function anchor(menu){
-  if(menu.childNodes[1].style.display == "block"){
+  if(menu.childNodes[3].style.display == "block"){
     //Deanchor
-    menu.childNodes[1].style.display = "none";
-    menu.childNodes[1].style.color = "#818181";
+    menu.childNodes[3].style.display = "none";
+    menu.childNodes[3].style.color = "#818181";
     menu.style.color = "#818181";
 
   }else{
     //Anchor
-    menu.childNodes[1].style.display = "block";
-    menu.childNodes[1].style.position = "relative";
+    menu.childNodes[3].style.display = "block";
+    menu.childNodes[3].style.position = "relative";
     menu.style.color = "#f1f1f1";
-    // menu.removeEventListener("mouseout", function(){});
-    // console.log("Anchored");
-
   }
 }
 
 function showMenu(menu){
-  // menu.childNodes[1].style.display = "block";
-  // menu.childNodes[1].style.position = "relative";
   menu.style.color = "#f1f1f1";
-
 }
 
 function hideMenu(menu){
-  // menu.childNodes[1].style.display = "none";
   menu.style.color = "#818181";
 }
 
@@ -102,6 +95,6 @@ Array.from(menus).forEach((menu)=>{
   menu.addEventListener("mouseover", function(){showMenu(menu)});
   menu.addEventListener("mouseout", function(){hideMenu(menu)});
   if(menu.childElementCount > 0){
-    menu.addEventListener("click", function(){anchor(menu)});
+    menu.childNodes[1].addEventListener("click", function(){anchor(menu)});
   }
 });
