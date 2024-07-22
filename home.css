@@ -31,7 +31,7 @@ body{
 }
 
 /* Horizontal line animation and styles */
-hr{
+#hr{
     transform: translateX(-100%);
     animation: 1s ease-out 0s 1 slideInFromLeft;
     animation-delay: 1.5s;
@@ -311,10 +311,10 @@ a{
 .projectMenu:hover{
     color: #f1f1f1;
 }
-.projectMenu:hover .projectSubmenu{
+/* .projectMenu:hover .projectSubmenu{
     display: block;
     position: relative;
-}
+} */
 
 .projectSubmenu{
     display: none;
@@ -374,13 +374,12 @@ a{
     font-style: italic;
 }
 
-#projectInfo img{
-    float: left;
-    margin: 5px;
-    /* width: 500px; */
-    /* height: 400px; */
+#implementationImages{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-evenly;    
 }
+
 #implementationDetails{
-    text-align: justify;
     margin: 5px;
 }

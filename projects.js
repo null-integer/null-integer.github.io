@@ -8,7 +8,7 @@ let projectDB = [
     {projectSection:"Algorithms & Data Structures",projectName: "Auto Completer", projectDescription:"The autocompleter project simulates that of a smartphone's autocompleter feature. Given a substring, it provides the top three completions with the most frequency. This class uses an AVL binary search tree to provide speedy results. The search tree rebalances itself to insert in logarithmic time. Insertion works by firstly recursively inserting the new node; after that, the tree is rebalanced by performing the necessary rotations to keep the AVL rule always applicable (height difference between a right and left subtree cannot exceed one node).", projectImages:["autocompleter.png"]},
     {projectSection:"Algorithms & Data Structures",projectName: "Auto Completer 2", projectDescription:"The previous autocompleter uses a balanced binary search tree. This leads to a O(log(n)) worst-case run time. This is a good time; however in modern times, this type of latency is not acceptable. In this project, I speed up the autocompleter class by using a different abstract data structure. To achieve a constant worst-case running time, I employ a trie data structure.<br/><br/>&#x2022;Insert - To insert a word in constant time, relative to the amount of saved words, we follow the trie, letter by letter, until we reach the end, marking the end as a valid word.<br/><br/>&#x2022;Completions - To recover valid completions in constant time, we follow the trie path and append possible completions to a vector when a node is marked as a valid word.", projectImages:["trie.jpg"]},
     {projectSection:"Algorithms & Data Structures",projectName: "Priority Queue", projectDescription:"The purpose of this project was to implement a Min Priority Queue to use in later projects. All major operations, push, pop, and decrease_key, in this class run in O(log(n)) time. This Priority Queue uses a heap, represented by a vector of string to integer map, and an unordered map, mapping the string with the index it belongs to in the heap vector.<br/><br/>&#x2022;All operations work in a similar matter. To push, pop, or decrease priority, a new pair is appended to the heap. Since the order of priorities in the updated heap might not be in the correct order, the priority queue is now compromised. The heap is therefore reordered by taking advantage of the sorted nature of the vector. By using a binary search approach, the elements in the heap are swapped until the correct order is ensured. This leads to O(log(n)) operation times.", projectImages:["priorityQueue.png"]},
-    {projectSection:"Algorithms & Data Structures",projectName: "Maze", projectDescription:"Currently in the process of importing this project to this page.", projectImages:["robot.png"]},
+    {projectSection:"Algorithms & Data Structures",projectName: "Maze", projectDescription:"Currently in the process of importing this project to this page.", projectImages:["maze.png"]},
     {projectSection:"Algorithms & Data Structures",projectName: "Maze 2", projectDescription:"Currently in the process of importing this project to this page.", projectImages:["robot.png"]},
     {projectSection:"Algorithms & Data Structures",projectName: "Arbitrage", projectDescription:"Currently in the process of importing this project to this page.", projectImages:["robot.png"]},
 
@@ -61,7 +61,7 @@ function showProject(project){
         document.getElementById("implementationImages").appendChild(img);
     });
 
-    document.getElementById("implementationDetails").innerHTML = project.projectDescription;
+    document.getElementById("implementationDetails").innerHTML = "<h4>"+project.projectDescription+"</h4>";
 
 }
 
@@ -80,6 +80,13 @@ function populateMenus(){
     });
 }
 
+//Display project amounts
 document.getElementsByClassName("projectMenu")[document.getElementsByClassName("projectMenu").length - 1].innerText = `Total Projects: ${projectDB.length}`;
 populateMenus();
+
+//Add horizontal line for project division
+let submenus = document.getElementsByClassName("projectSubmenu");
+Array.from(submenus).forEach((menu)=>{
+  menu.appendChild(document.createElement('hr'));
+});
 showProject(projectDB[0]);
