@@ -374,7 +374,7 @@ a{
     font-style: italic;
 }
 
-#implementationImages{
+#implementationImages, #implementationVideos{
     margin-top: 25px;
     display: flex;
     justify-content: space-evenly;    
