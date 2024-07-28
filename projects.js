@@ -42,7 +42,7 @@ let projectDB = [
 
     {projectSection:"Robotics Programming",projectName: "Rotation Matrices", projectDescription:"Currently in the process of importing this project to this page.", projectImages:["robot.png"]},
     {projectSection:"Robotics Programming",projectName: "Autonomous Mobile Robots", projectDescription:"Currently in the process of importing this project to this page.", projectImages:["robot.png"]},
-    {projectSection:"Robotics Programming",projectName: "PacMan Maze", projectDescription:"Currently in the process of importing this project to this page.", projectImages:["robot.png"]},
+    {projectSection:"Robotics Programming",projectName: "PacMan Maze", projectDescription:"Currently in the process of importing this project to this page.", projectImages:[], projectVideos:["https://www.youtube.com/embed/Z5GOxhXmGp4?si=Qkl0kOdJaR_oHWrD"]},
     {projectSection:"Robotics Programming",projectName: "EKF", projectDescription:"Currently in the process of importing this project to this page.", projectImages:["robot.png"]},
 
 ];
