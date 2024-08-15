@@ -1,5 +1,6 @@
 
 /* overall file styling */
+
 *{
     box-sizing: border-box;
 }
@@ -382,4 +383,66 @@ a{
 
 #implementationDetails{
     margin: 5px;
+}
+
+
+#mobilealert{
+    display:none;
+}
+
+/*mobile*/
+@media screen and (max-width: 480px) {
+    .menu{
+        display: block;
+        text-align: center;
+    }
+    #aboutSection ul{
+        display: block;
+
+    }
+    #aboutWrapper{
+        height: 160vh;
+        justify-content: center;
+        display: flex;
+    }
+    #timeline ul li{
+        background-color: #292929;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-left: 0px;
+
+    }
+    #timeline .symbol{
+        display: none;
+    }
+
+    #timeline ul li .box{
+        margin-left: 0px;
+        width: 300px;
+        transform: none;
+        transition: none;
+        left:0px;
+        right:0px;
+        transform: none;
+    }
+    #timeline ul li .box.show{
+        transform: none;
+        transition: none;
+    }
+
+    #projectNav{
+        display:block;
+    }
+
+    #projectInfo{
+        width:100vw;
+    }
+
+    #mobilealert{
+        display:block;
+    }
+
+    .alert{
+        width:350px;
+    }
 }
